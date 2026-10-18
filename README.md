@@ -69,7 +69,7 @@ ExcelRepository/
 
 1. **作業対象の `.xlsm` をバックアップ**してください。必ずコピーで試してください。
 2. Excel の設定で、必要なマクロ実行許可と **「VBA プロジェクト オブジェクト モデルへのアクセスを信頼する」**を有効にします。後者は Excel の［ファイル］→［オプション］→［トラスト センター］→［トラスト センターの設定］→［マクロの設定］で確認できます。信頼できるファイルでのみ使用してください。
-3. Builder 側の Excel ブックに `src/Builder/` の3モジュールを配置します（提供される `.xlsm` がある場合はそれを使用できます）。Restorer 側には `src/Restorer/` の2モジュールを配置します。
+3. Builder 側の Excel ブックに `Builder/` の3モジュールを配置します（提供される `.xlsm` がある場合はそれを使用できます）。Restorer 側には `Restorer/` の2モジュールを配置します。
 4. **対象ブックを保存し、アクティブにしてから** Builder の `ExportRepositoryForActiveWorkbook` を実行します。マクロは `ActiveWorkbook` を対象にします。
 5. 生成されたテキストと CSV を Git で管理し、必要に応じて AI エージェントで変更します。
 6. **再度対象ブックのコピーをバックアップ**したうえで、対象ブックをアクティブにし、Restorer の `ImportRepositoryForActiveWorkbook` を実行します。
