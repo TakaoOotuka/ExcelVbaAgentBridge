@@ -6,6 +6,10 @@ Excel の VBA プロジェクトをテキストファイルと CSV に書き出�
 
 このツールは私自身の開発作業で使うために作成しました。**Excel の機能をすべてテキスト化・復元するものではありません。** また、Excel のマクロを AI が自動実行する仕組みでもありません。
 
+## ダウンロード
+
+最新版のExcelマクロ（Builder・Restorer）は、[Releasesページ](https://github.com/TakaoOotuka/ExcelVbaAgentBridge/releases/latest)からダウンロードできます。
+
 ## なぜ作ったのか
 
 Excel VBAのコードをAIに書いてもらっても、VBEへのコピー＆ペーストを繰り返すのでは、開発の流れが途切れてしまいます。そこで、VBAコードとUserFormの一部レイアウト情報をファイルとして書き出し、AIエージェントが編集したものをExcelへ戻せるようにしました。
@@ -23,11 +27,11 @@ Excel VBAのコードをAIに書いてもらっても、VBEへのコピー＆ペ
 
 ## 収録内容
 
-- `src/Builder/modRepositoryExport.bas` — VBA プロジェクトのエクスポート
-- `src/Builder/modWorkbookExport.bas` — ブック、シート、テーブル、名前定義などの**情報の**エクスポート
-- `src/Builder/modUtf8File.bas` — テキストファイル入出力補助
-- `src/Restorer/modRepositoryImport.bas` — VBA プロジェクトのインポート
-- `src/Restorer/modUtf8File.bas` — テキストファイル入出力補助
+- `Builder/modRepositoryExport.bas` — VBA プロジェクトのエクスポート
+- `Builder/modWorkbookExport.bas` — ブック、シート、テーブル、名前定義などの**情報の**エクスポート
+- `Builder/modUtf8File.bas` — テキストファイル入出力補助
+- `Restorer/modRepositoryImport.bas` — VBA プロジェクトのインポート
+- `Restorer/modUtf8File.bas` — テキストファイル入出力補助
 
 同名の `modUtf8File.bas` は Builder と Restorer で内容が異なるため、それぞれ別フォルダーに収録しています。
 
